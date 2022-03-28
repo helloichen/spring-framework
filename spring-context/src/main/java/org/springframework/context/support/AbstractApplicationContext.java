@@ -514,7 +514,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	}
 
 	/**
-	 * 容器启动入口
+	 * 容器启动入口.
 	 */
 	@Override
 	public void refresh() throws BeansException, IllegalStateException {
