@@ -555,6 +555,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 				finishBeanFactoryInitialization(beanFactory);
 
 				// Last step: publish corresponding event.
+				// DefaultLifecycleProcessor 执行 SmartLifecycle 的 bean 的回调
 				finishRefresh();
 			}
 
@@ -897,6 +898,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		initLifecycleProcessor();
 
 		// Propagate refresh to lifecycle processor first.
+		// 执行 SmartLifecycle 的 bean
 		getLifecycleProcessor().onRefresh();
 
 		// Publish the final event.
